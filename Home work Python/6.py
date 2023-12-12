@@ -5,9 +5,22 @@ for i in range(n):
     a.add(num)
 print(len(a))
 
-a = {1, 2, 3, 4, 5}
-b = {1, 2, 3}
-print(len(a.intersection(b)))
+a = []
+b = []
+
+n = int(input())
+for i in range(n):
+    a.append(int(input()))
+
+m = int(input())
+for i in range(m):
+    b.append(int(input()))
+
+s1 = set(a)
+s2 = set(b)
+common = s1 & s2
+
+print(len(common))
 
 numbers = input().split()
 seen_numbers = set()
