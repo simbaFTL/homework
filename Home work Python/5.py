@@ -24,6 +24,8 @@ b = []
 for i in range(n):
     a.append(int(input()))
 
+a.sort()
+
 for x in range(len(a)):
     if a[x] + min(a) <= m:
         b += [[a[x], min(a)]]
