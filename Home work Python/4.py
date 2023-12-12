@@ -5,5 +5,6 @@ else:
     print('no')
 
 b = input()
-b.replace('  ', ' ')
+while "  " in b:
+  b = b.replace("  "," ")
 print(b)
