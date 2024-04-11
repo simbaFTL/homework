@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Save to localStorage</title>
+</head>
+<body>
+  <input type="text" id="textInput" placeholder="Enter text">
+  <button id="saveButton">Сохранить</button>
+
+  <script>
+    const textInput = document.getElementById('textInput');
+    const saveButton = document.getElementById('saveButton');
+
+    saveButton.addEventListener('click', () => {
+      const text = textInput.value;
+
+      localStorage.setItem('Text', text);
+
+      console.log('Text saved to localStorage');
+    });
+
+    setTimeout(() => {
+      const savedText = localStorage.getItem('Text');
+      console.log('Saved text:', savedText);
+    }, 2000);
+  </script>
+</body>
+</html>

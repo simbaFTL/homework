@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Calculator</title>
+</head>
+<body>
+  <script>
+    const calculator = {
+    add(a, b) {
+      if (typeof a !== 'number' || typeof b !== 'number') {
+        return 'Ошибка: аргументы должны быть числами.';
+      }
+      return a + b;
+    },
+  
+    subtract(a, b) {
+      if (typeof a !== 'number' || typeof b !== 'number') {
+        return 'Ошибка: аргументы должны быть числами.';
+      }
+      return a - b;
+    },
+  
+    multiply(a, b) {
+      if (typeof a !== 'number' || typeof b !== 'number') {
+        return 'Ошибка: аргументы должны быть числами.';
+      }
+      return a * b;
+    },
+  
+    divide(a, b) {
+      if (typeof a !== 'number' || typeof b !== 'number') {
+        return 'Ошибка: аргументы должны быть числами.';
+      }
+      if (b === 0) {
+        return 'Ошибка: деление на ноль недопустимо.';
+      }
+      return a / b;
+    }
+  };
+
+console.log(calculator.add(5, 3)); // Вывод: 8
+console.log(calculator.subtract(10, 4)); // Вывод: 6
+console.log(calculator.multiply(2, 7)); // Вывод: 14
+console.log(calculator.divide(15, 3)); // Вывод: 5
+console.log(calculator.divide(10, 0)); // Вывод: "Ошибка: деление на ноль недопустимо."
+console.log(calculator.add(5, 'hello')); // Вывод: "Ошибка: аргументы должны быть числами."
+  </script>
+</body>
+</html>

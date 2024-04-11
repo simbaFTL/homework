@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Employee List</title>
+</head>
+<body>
+  <script>
+    const employees = [
+      { firstName: 'John', lastName: 'Wick' },
+      { firstName: 'Mary', lastName: 'Jane' },
+      { firstName: 'Peter', lastName: 'Parker' },
+      { firstName: 'Gordon', lastName: 'Freeman' },
+      { firstName: 'Peppa', lastName: 'Pig' }
+    ];
+
+    const employeeList = document.createElement('ol');
+
+    employees.forEach(employee => {
+      const employeeItem = document.createElement('li');
+      employeeItem.textContent = `${employee.firstName} ${employee.lastName}`;
+      employeeList.appendChild(employeeItem);
+    });
+
+    document.body.appendChild(employeeList);
+  </script>
+</body>
+</html>
